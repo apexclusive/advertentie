@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marktplaats advertentie tips — APEXclusive</title>
+  <meta name="description" content="APEXclusive marktplaats advertentie tips voor een betere auto advertentie." />
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#0d0d0d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#advertentie-checklist">Direct naar de advertentie checklist</a>
+  <div id="progress"></div>
+
+  <header>
+    <a href="https://apexclusive.nl" class="brand" target="_blank" rel="noreferrer">
+      <span class="brand-apex">APEX</span>
+      <span class="brand-sep" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="brand-excl">exclusive</span>
+    </a>
+    <a href="https://apexclusive.nl/#tools" class="back-btn" target="_blank" rel="noreferrer">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Terug naar tools
+    </a>
+  </header>
+
+  <div class="page-hero" id="top">
+    <div class="page-hero-inner">
+      <h1>Marktplaats advertentie<br><em>Genereer een winnende verkooptekst</em></h1>
+      <div class="hero-meta">
+        <div class="hero-points" aria-label="Advertentie voordelen">
+          <span>Direct klaar</span>
+          <span>Geen registratie</span>
+          <span>Voor serieuze verkopers</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tri-div"></div>
+
+  <main class="wrap">
+    <div class="form-card rv" id="advertentie-checklist">
+      <div class="form-inner">
+        <p class="ey tri-in" style="margin-bottom:1.1rem">
+          <span class="ey-tri" aria-hidden="true"><span></span><span></span><span></span></span>
+          Advertentie scan
+        </p>
+        <form class="valuation-form" id="ad-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label class="field-lbl" for="ad-title">Advertentietitel</label>
+              <input class="fi" id="ad-title" name="adTitle" type="text" value="Audi A4 2.0 TDI S-line 2017" required>
+            </div>
+
+            <div class="field">
+              <label class="field-lbl" for="price">Vraagprijs (€)</label>
+              <input class="fi" id="price" name="price" type="number" min="0" step="500" value="14950" required>
+            </div>
+
+            <div class="field">
+              <label class="field-lbl" for="mileage">Kilometerstand</label>
+              <input class="fi" id="mileage" name="mileage" type="number" min="0" value="68400" required>
+            </div>
+
+            <div class="field">
+              <label class="field-lbl" for="photos">Aantal foto’s</label>
+              <select class="fi" id="photos" name="photos">
+                <option value="6">6-8 foto’s</option>
+                <option value="8" selected>8-10 foto’s</option>
+                <option value="12">10+ foto’s</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field-lbl" for="condition">Auto staat</label>
+              <select class="fi" id="condition" name="condition">
+                <option value="excellent">Uitstekend</option>
+                <option value="good" selected>Goed</option>
+                <option value="average">Gemiddeld</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field-lbl" for="title-status">Titel / documenten</label>
+              <select class="fi" id="title-status" name="titleStatus">
+                <option value="ok" selected>In orde</option>
+                <option value="pending">Controle nodig</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label class="field-lbl" for="ad-summary">Belangrijkste verkoopargument</label>
+              <select class="fi" id="ad-summary" name="adSummary">
+                <option value="service" selected>Goed onderhouden en volledig gedocumenteerd</option>
+                <option value="value">Goed prijs/kwaliteit-verhouding</option>
+                <option value="comfort">Luxe en comfortabele uitvoering</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="inline-summary" id="inline-summary">Advertentie niveau: solide startpositie</div>
+          <div class="form-feedback" id="form-feedback" role="status" aria-live="polite" hidden></div>
+
+          <button type="submit" class="calc-btn"><span>Genereer advertentietekst</span></button>
+          <button type="button" class="reset-link" id="reset-button">Opnieuw beginnen</button>
+          <div class="trust-strip">
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+              Geen registratie, direct resultaat
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24"><path d="M6 12l4 4 8-8"/></svg>
+              Marktplaats-ready verkooptekst
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24"><path d="M12 2l10 6v8l-10 6-10-6V8z"/></svg>
+              Vertrouwen door duidelijkheid en detail
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="empty-state" id="empty-state">
+      <div class="empty-tri"><span></span><span></span><span></span></div>
+      <div class="empty-title">Vul de advertentiegegevens in om de scan te starten.</div>
+      <div class="empty-sub">Foto's · Prijs · Tekst · Contactinformatie</div>
+    </div>
+
+    <div class="result-wrap" id="result-wrap" hidden aria-live="polite">
+      <div class="betalen-wrap" id="uitkomst">
+        <div class="betalen-header">
+          <div class="betalen-icon">%</div>
+          <div class="betalen-content">
+            <div class="betalen-lbl">Advertentie score</div>
+            <div class="betalen-val" id="best-monthly">92 / 100</div>
+            <div class="betalen-sub" id="best-monthly-sub">Sterke basis voor een professionele advertentie</div>
+          </div>
+        </div>
+        <div class="betalen-kosten">
+          <div class="betalen-kost bpm-kost">
+            <div class="betalen-kost-lbl">Top focus</div>
+            <div class="betalen-kost-val" id="best-overall">Foto kwaliteit</div>
+            <div class="betalen-kost-sub" id="best-overall-sub">Gebruik meer buiten- en interieurfoto's</div>
+          </div>
+          <div class="betalen-kost">
+            <div class="betalen-kost-lbl">Vraagprijs</div>
+            <div class="betalen-kost-val" id="lowest-total">€ 14.950</div>
+            <div class="betalen-kost-sub" id="lowest-total-sub">Zeer marktconform</div>
+          </div>
+          <div class="betalen-kost">
+            <div class="betalen-kost-lbl">Reactiepotentieel</div>
+            <div class="betalen-kost-val" id="avg-rate">Hoog</div>
+            <div class="betalen-kost-sub">Met heldere beschrijving</div>
+          </div>
+          <div class="betalen-kost">
+            <div class="betalen-kost-lbl">Checklist</div>
+            <div class="betalen-kost-val" id="loan-principal">8/10</div>
+            <div class="betalen-kost-sub">Volledigheid van advertentie</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-main">
+        <div class="result-top">
+          <div class="rn-card">
+            <div class="rn-lbl">Advertentietitel</div>
+            <div class="rn-val" id="summary-duration">Audi A4 2.0 TDI S-line</div>
+            <div class="rn-sub">Heldere merk/model focus</div>
+          </div>
+          <div class="rn-card">
+            <div class="rn-lbl">Toon</div>
+            <div class="rn-val" id="summary-interest-type">Professioneel</div>
+            <div class="rn-sub">Kort, veilig en overtuigend</div>
+          </div>
+          <div class="rn-card">
+            <div class="rn-lbl">Marketing focus</div>
+            <div class="rn-val" id="summary-preference">Onderhoudsgoed</div>
+            <div class="rn-sub">Gebaseerd op bewezen staat</div>
+          </div>
+        </div>
+        <div class="result-footnote" id="result-footnote">Gebruik deze scan als praktische basis voor uw advertentievoorbereiding.</div>
+      </div>
+
+      <div class="offers-section">
+        <div class="offers-head">
+          <div class="section-lbl">10 tips en trucs</div>
+          <label class="sort-wrap" for="sort-offers">
+            Prioriteit
+            <select id="sort-offers" class="sort-select">
+              <option value="overall" selected>Beste score</option>
+              <option value="monthly">Foto kwaliteit</option>
+              <option value="total">Prijs communicatie</option>
+              <option value="apr">Beschrijvingskracht</option>
+              <option value="flex">Contact & bereikbaarheid</option>
+            </select>
+          </label>
+        </div>
+        <div class="offers-grid" id="offers-grid">
+          <article class="offer-card">
+            <div class="offer-head">
+              <div class="offer-name">Gebruik een duidelijke titel</div>
+              <span class="offer-tag">01</span>
+            </div>
+            <div class="offer-stats">
+              <div class="stat"><div class="stat-lbl">Focus</div><div class="stat-val">Merk + model</div></div>
+              <div class="stat"><div class="stat-lbl">Score</div><div class="stat-val">9/10</div></div>
+            </div>
+            <div class="offer-foot">Gebruik merk, model, bouwjaar, motor en een opvallend punt in één zin.</div>
+          </article>
+          <article class="offer-card">
+            <div class="offer-head">
+              <div class="offer-name">Laat de juiste foto’s zien</div>
+              <span class="offer-tag">02</span>
+            </div>
+            <div class="offer-stats">
+              <div class="stat"><div class="stat-lbl">Vereist</div><div class="stat-val">8+</div></div>
+              <div class="stat"><div class="stat-lbl">Score</div><div class="stat-val">8/10</div></div>
+            </div>
+            <div class="offer-foot">Gebruik heldere buiten- en interieurfoto’s, met kilometerstand en profiel.</div>
+          </article>
+          <article class="offer-card">
+            <div class="offer-head">
+              <div class="offer-name">Prijs realistisch en scherp</div>
+              <span class="offer-tag">03</span>
+            </div>
+            <div class="offer-stats">
+              <div class="stat"><div class="stat-lbl">Stijl</div><div class="stat-val">Concurrerend</div></div>
+              <div class="stat"><div class="stat-lbl">Score</div><div class="stat-val">7/10</div></div>
+            </div>
+            <div class="offer-foot">Vermijd een te hoge vraagprijs die de gesprekspartner direct doet twijfelen.</div>
+          </article>
+          <article class="offer-card">
+            <div class="offer-head">
+              <div class="offer-name">Noem onderhoud en staat</div>
+              <span class="offer-tag">04</span>
+            </div>
+            <div class="offer-stats">
+              <div class="stat"><div class="stat-lbl">Transparant</div><div class="stat-val">Ja</div></div>
+              <div class="stat"><div class="stat-lbl">Score</div><div class="stat-val">9/10</div></div>
+            </div>
+            <div class="offer-foot">Beschrijf onderhoud, APK-status, kleine krasjes en servicehistorie.</div>
+          </article>
+          <article class="offer-card">
+            <div class="offer-head">
+              <div class="offer-name">Beschrijf voordelen</div>
+              <span class="offer-tag">05</span>
+            </div>
+            <div class="offer-stats">
+              <div class="stat"><div class="stat-lbl">Inhoud</div><div class="stat-val">Opties</div></div>
+              <div class="stat"><div class="stat-lbl">Score</div><div class="stat-val">8/10</div></div>
+            </div>
+            <div class="offer-foot">Laat de koper voelen wat hij krijgt: luxe, comfort, rijcomfort en efficiëntie.</div>
+          </article>
+          <article class="offer-card">
+            <div class="offer-head">
+              <div class="offer-name">Zet service en historie neer</div>
+              <span class="offer-tag">06</span>
+            </div>
+            <div class="offer-stats">
+              <div class="stat"><div class="stat-lbl">Data</div><div class="stat-val">Onderhoud</div></div>
+              <div class="stat"><div class="stat-lbl">Score</div><div class="stat-val">8/10</div></div>
+            </div>
+            <div class="offer-foot">Een goed onderhouden auto heeft meer vertrouwen en echte verkoopwaarde.</div>
+          </article>
+          <article class="offer-card">
+            <div class="offer-head">
+              <div class="offer-name">Gebruik een professionele toon</div>
+              <span class="offer-tag">07</span>
+            </div>
+            <div class="offer-stats">
+              <div class="stat"><div class="stat-lbl">Toon</div><div class="stat-val">Krachtig</div></div>
+              <div class="stat"><div class="stat-lbl">Score</div><div class="stat-val">9/10</div></div>
+            </div>
+            <div class="offer-foot">Schrijf kort, helder en betrouwbaar. Vermijd ruis en te veel reclamewoorden.</div>
+          </article>
+          <article class="offer-card">
+            <div class="offer-head">
+              <div class="offer-name">Maak contact gemakkelijk</div>
+              <span class="offer-tag">08</span>
+            </div>
+            <div class="offer-stats">
+              <div class="stat"><div class="stat-lbl">Contact</div><div class="stat-val">Bel of app</div></div>
+              <div class="stat"><div class="stat-lbl">Score</div><div class="stat-val">7/10</div></div>
+            </div>
+            <div class="offer-foot">Laat zien dat je bereikbaar bent en bereid bent de auto te tonen.</div>
+          </article>
+          <article class="offer-card">
+            <div class="offer-head">
+              <div class="offer-name">Controleer documenten</div>
+              <span class="offer-tag">09</span>
+            </div>
+            <div class="offer-stats">
+              <div class="stat"><div class="stat-lbl">Check</div><div class="stat-val">Kenteken</div></div>
+              <div class="stat"><div class="stat-lbl">Score</div><div class="stat-val">9/10</div></div>
+            </div>
+            <div class="offer-foot">Controleer kentekenbewijs, registratie, APK en onderhoudsdocumenten vooraf.</div>
+          </article>
+          <article class="offer-card">
+            <div class="offer-head">
+              <div class="offer-name">Werk advertentie actief bij</div>
+              <span class="offer-tag">10</span>
+            </div>
+            <div class="offer-stats">
+              <div class="stat"><div class="stat-lbl">Actie</div><div class="stat-val">Reactie</div></div>
+              <div class="stat"><div class="stat-lbl">Score</div><div class="stat-val">8/10</div></div>
+            </div>
+            <div class="offer-foot">Reageer snel, werk foto’s bij en aktualiseer de tekst als nodig.</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="ad-copy-block">
+        <div class="section-lbl">Voorstel advertentietekst</div>
+        <article class="ad-copy-card">
+          <h3 id="ad-copy-title">Vul uw voertuiggegevens in en genereer een sterke advertentietekst.</h3>
+          <pre id="ad-copy-desc" class="ad-copy-text">De verkooptekst verschijnt hier zodra u op de knop drukt. U kunt deze direct kopiëren en gebruiken in uw Marktplaats advertentie.</pre>
+          <div class="ad-copy-meta" id="ad-copy-meta">
+            <span id="ad-copy-price">Vraagprijs: € 14.950</span>
+            <span id="ad-copy-mileage">Kilometerstand: 68.400 km</span>
+            <span id="ad-copy-focus">Focus: Onderhoudsgoed & betrouwbaarheid</span>
+          </div>
+          <div class="copy-actions">
+            <button type="button" class="btn copy-btn" id="copy-text-btn"><span>Kopieer advertentietekst</span></button>
+            <a href="https://www.marktplaats.nl/" target="_blank" rel="noreferrer" class="btn gh marktplaats-btn" id="marktplaats-btn"><span>Naar Marktplaats</span></a>
+          </div>
+          <div class="copy-status" id="copy-status" aria-live="polite"></div>
+          <div class="ad-copy-foot">Plak de gekopieerde tekst in uw Marktplaats advertentie voor een professioneel resultaat.</div>
+        </article>
+      </div>
+
+      <div class="insight-strip" id="insight-strip" aria-live="polite">
+        <div class="insight-item">
+          <span class="insight-lbl">Advertentie instelling</span>
+          <span class="insight-val" id="spread-value">Opstelling klaar</span>
+        </div>
+        <div class="insight-item">
+          <span class="insight-lbl">Aanbevolen focus</span>
+          <span class="insight-val" id="focus-value">Professionele foto-set</span>
+        </div>
+        <div class="insight-item">
+          <span class="insight-lbl">Onderhandelruimte</span>
+          <span class="insight-val" id="negotiation-value">Gemiddeld</span>
+        </div>
+      </div>
+
+      <div class="detail-section">
+        <div class="section-lbl">Toelichting</div>
+        <div class="detail-grid">
+          <div><span class="di-lbl">Titel</span><span class="di-val">Meeuwen reeks van informatie: merk, model, bouwjaar, motor, prijs, prijsniveau en unieke inhoud.</span></div>
+          <div><span class="di-lbl">Foto's</span><span class="di-val">Zet fotografische kwaliteit en rust in beeld zodat een koper sneller vertrouwen krijgt.</span></div>
+          <div><span class="di-lbl">Contact</span><span class="di-val">Gebruik een bereikbare telefoon en wees direct in uw reacties.</span></div>
+        </div>
+      </div>
+
+      <div class="disclaimer">Deze scan geeft een indicatieve kwaliteitsscore van uw advertentie. De werkelijke reactie hangt af van prijs, foto’s, staat, bereikbaarheid en onderhandelingsaanpak.</div>
+      <div class="other-tools"><span class="other-tools-lbl">Meer instrumenten</span><div class="other-tools-links"><a href="https://waarde.apexclusive.nl" class="tool-link-sm" target="_blank" rel="noreferrer">Auto Waarde Tool</a><a href="https://lening.apexclusive.nl" class="tool-link-sm" target="_blank" rel="noreferrer">Auto Lening Vergelijker</a></div></div>
+      <div class="cta-wrap" id="contact">
+        <p class="ey c tri-in" style="margin-bottom:.85rem"><span class="ey-tri" aria-hidden="true"><span></span><span></span><span></span></span>Persoonlijke hulp nodig?<span class="ey-tri-r" aria-hidden="true"><span></span><span></span><span></span></span></p>
+        <h3>Wilt u de advertentie laten controleren?<br><em>APEXclusive denkt met u mee.</em></h3>
+        <p>Gebruik deze checklist als eerste controle en laat daarna de advertentie of prijsstelling met een expert toetsen.</p>
+        <div class="cta-btns"><a class="btn" href="https://apexclusive.nl/#contact" target="_blank" rel="noreferrer"><span>Vrijblijvend gesprek</span></a><a class="btn gh" href="https://apexclusive.nl/#tools" target="_blank" rel="noreferrer"><span>Meer tools</span></a></div>
+      </div>
+
+      <section class="methodology" aria-label="Methodiek van de advertentie scan">
+        <div class="section-lbl">Methodiek</div>
+        <p>De score combineert prijs, foto's, tekst, contact en zekerheid. Een sterke advertentie voelt gereserveerd, transparant en aantrekkelijk aan.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="ft-tri"><span></span><span></span><span></span></div>
+    <div class="ft-copy"><a href="https://apexclusive.nl" target="_blank" rel="noreferrer">© <span id="yr">2026</span> APEXclusive · Automotive Advisory · Maastricht</a></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
