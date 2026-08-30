@@ -1,0 +1,261 @@
+/* =====================================================================
+   APEXclusive Garage · Tool 09 — Advertentie tips
+   Page layer on top of apexclusive-modern.css (homepage design system).
+   Same tokens, same rhythm, same components — only tool-specific parts.
+   ===================================================================== */
+
+/* --- Section rhythm (matches the launched homepage finish pass) ------ */
+section { scroll-margin-top: 84px; }
+.intro,
+.scan,
+.tips,
+.process,
+.contact { padding-block: clamp(5rem, 8vw, 8rem); }
+
+/* --- Hero: calm scale like the homepage ------------------------------ */
+.hero-content { padding-block: 5rem 6rem; }
+.hero h1 { font-size: clamp(3rem, 7vw, 6.8rem); max-width: 13ch; }
+.intro h2,
+.section-heading h2,
+.process h2,
+.contact h2 { font-size: clamp(2.8rem, 5vw, 5.2rem); }
+.section-heading { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+
+/* Section-heading intro text is tuned for light sections; keep it readable on dark */
+.section-dark .section-heading > p { color: var(--muted); }
+.section-dark .section-heading { align-items: start; }
+
+/* Under-links on dark sections, same treatment as the homepage investment block */
+.process .under-link,
+.contact .under-link { color: var(--paper); border-color: var(--line); }
+
+/* --- Scan section: form card + result card ---------------------------- */
+.scan-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2rem, 8vw, 8rem);
+  align-items: start;
+}
+.scan-grid > * { min-width: 0; }
+
+/* Two-column field grid inside the form card */
+.form-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+.form-rows .full { grid-column: 1 / -1; }
+
+/* Selects styled exactly like the dark lead-form inputs */
+.lead-form select {
+  width: 100%;
+  margin-top: 0.45rem;
+  padding: 0.8rem 2.3rem 0.8rem 0.75rem;
+  border: 1px solid rgba(244, 241, 235, 0.22);
+  border-radius: 0;
+  background: rgba(244, 241, 235, 0.05)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23e2b28e' stroke-width='1.5'/%3E%3C/svg%3E")
+    no-repeat right 0.75rem center / 11px;
+  color: var(--text);
+  color-scheme: dark;
+  outline: none;
+  font-size: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.lead-form select:focus {
+  border-color: var(--copper-light);
+  box-shadow: 0 0 0 3px rgba(183, 119, 72, 0.15);
+}
+
+/* "Opnieuw beginnen" — quiet text action under the submit button */
+.form-reset {
+  display: block;
+  width: 100%;
+  margin-top: 0.9rem;
+  background: none;
+  border: 0;
+  padding: 0.2rem;
+  color: var(--muted);
+  font: 500 0.62rem/1 var(--display);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.form-reset:hover { color: var(--copper-light); }
+
+/* --- Result panel ----------------------------------------------------- */
+.scan-empty,
+.scan-output {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: rgba(9, 12, 12, 0.78);
+  border: 1px solid var(--line);
+}
+.scan-empty {
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.scan-empty h3 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 0.8rem;
+}
+.scan-empty p { color: var(--muted); max-width: 34ch; }
+
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--line);
+}
+.score-lbl {
+  display: block;
+  color: var(--copper-light);
+  font: 500 0.6rem/1 var(--display);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.score-val {
+  display: block;
+  margin-top: 0.5rem;
+  font: 400 clamp(2.8rem, 4.5vw, 3.9rem)/1 var(--serif);
+  color: var(--paper);
+  letter-spacing: -0.02em;
+}
+.score-val small {
+  font: 500 0.8rem/1 var(--display);
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  margin-left: 0.35rem;
+}
+.score-sub {
+  max-width: 20ch;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  text-align: right;
+}
+
+.scan-output .spec-row { margin-top: 1.6rem; }
+.scan-output .spec-row strong { font-size: clamp(1.15rem, 2vw, 1.6rem); }
+
+/* --- Generated ad copy ------------------------------------------------ */
+.copy-block { margin-top: 1.8rem; }
+.mini-label {
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font: 500 0.6rem/1 var(--display);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.copy-title {
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  margin-bottom: 0.9rem;
+}
+.ad-text {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  padding: 1.1rem 1.2rem;
+  background: rgba(244, 241, 235, 0.05);
+  border: 1px solid var(--line);
+  color: #deddd7;
+  font: 400 0.92rem/1.8 var(--sans);
+}
+.copy-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.3rem;
+  margin-top: 1rem;
+}
+.copy-meta span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
+.copy-meta span + span:before {
+  content: "·";
+  color: var(--copper);
+  margin-right: 1.3rem;
+}
+.copy-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.4rem;
+}
+.copy-actions .button { width: auto; margin-top: 0; }
+.copy-status { min-height: 1.5em; margin-top: 0.9rem; }
+
+.scan .fine-print { margin-top: 2.6rem; max-width: 78ch; }
+
+/* --- Tips grid: lighter service cards --------------------------------- */
+.tips-grid .service-card { min-height: 0; padding: clamp(1.3rem, 2.5vw, 1.8rem); }
+.tips-grid .service-card h3 {
+  margin-top: 1.7rem;
+  font-size: clamp(1.3rem, 2vw, 1.75rem);
+}
+.tips-grid .service-card p { font-size: 0.86rem; }
+.tip-score {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  color: #9d643d;
+  font: 600 0.58rem/1 var(--display);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* --- Garage note (more tools) at the bottom of the contact section ---- */
+.garage-note {
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.garage-links { display: flex; flex-wrap: wrap; gap: 1.6rem; }
+.garage-links a {
+  font: 500 0.6rem/1 var(--display);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c8cac3;
+}
+.garage-links a span { color: var(--copper-light); margin-left: 0.4rem; }
+.garage-links a:hover { color: var(--paper); }
+
+/* --- Responsive -------------------------------------------------------- */
+@media (max-width: 960px) {
+  .scan-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 860px) {
+  .score-row { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+  .score-sub { text-align: left; }
+  .scan .section-heading { align-items: start; }
+}
+@media (max-width: 560px) {
+  .hero h1 { font-size: clamp(2.8rem, 13vw, 4.5rem); }
+  .intro h2,
+  .section-heading h2,
+  .process h2,
+  .contact h2 { font-size: clamp(2.7rem, 12vw, 4.3rem); }
+  .form-rows { grid-template-columns: 1fr; }
+  .copy-actions .button { width: 100%; }
+  .garage-note { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .scan-empty { min-height: 280px; }
+}
+
+/* --- Print: keep the generated copy readable -------------------------- */
+@media print {
+  .ad-text { border: 1px solid #000; color: #000; }
+  .scan-empty,
+  .ai-panel { display: none !important; }
+}
